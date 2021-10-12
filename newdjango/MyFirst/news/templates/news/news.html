@@ -1,0 +1,23 @@
+{% extends 'mainpage/layout.html' %}
+{% load static %}
+{% block title %}
+    news
+{% endblock %}
+{% block content %}
+<main>
+    <div class="newsblock">
+        {% if not mynews  %}
+            There're no news at the moment. Come back later to read some interesting articles on any topic you wish)
+        {% else %}
+            {% for el in mynews %}
+                <a href="{% url 'news-detail' el.id %}" class="news_link">
+                    <div class="news_content">
+                            <h3>{{ el.title }}  </h3>
+                            <p>{{ el.announce }}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        {% endif %}
+    </div>
+</main>
+{% endblock %}

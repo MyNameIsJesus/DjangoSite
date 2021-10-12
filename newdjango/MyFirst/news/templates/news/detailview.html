@@ -1,0 +1,14 @@
+{% extends 'mainpage/layout.html' %}
+{% load static %}
+{% block title %}
+    {{ article.title }}
+{% endblock %}
+{% block content %}
+    <main>
+        <div class="news">
+            <h1>{{ article.title }}</h1>
+            <p> {{ article.full_text }}</p>
+            <p> {{ article.date }}</p>
+        </div>
+    </main>
+{% endblock %}

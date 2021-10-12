@@ -1,0 +1,24 @@
+{% extends 'mainpage/layout.html' %}
+{% load static %}
+{% block title %}
+Create News
+{% endblock %}
+{% block content %}
+<main>
+    <form method="post">
+        <h4 class="CreatingTitle"> Create Article </h4>
+        {% csrf_token %}
+        {{ form.title }}<br>
+        {{ form.announce }}<br>
+        {{ form.full_text }}<br>
+        {{ form.date }}<br>
+
+        <button class="btn btn-danger" type="submit">Add Article</button>
+
+
+    </form>
+
+
+
+</main>
+{% endblock %}

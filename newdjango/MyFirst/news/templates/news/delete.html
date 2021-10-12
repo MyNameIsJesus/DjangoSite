@@ -1,0 +1,19 @@
+{% extends 'mainpage/layout.html' %}
+{% load static %}
+{% block title %}
+Delete Article
+{% endblock %}
+{% block content %}
+<main>
+    <form method="post">
+        <h4> Delete Article </h4>
+        {% csrf_token %}
+        <button class="btn btn-danger" type="submit">Delete article</button>
+
+
+    </form>
+
+
+
+</main>
+{% endblock %}

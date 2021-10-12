@@ -1,0 +1,12 @@
+{% extends 'mainpage/layout.html' %}
+{% block title %}
+{% load static %}
+About
+{% endblock %}
+{% block content %}
+    <main>
+        <h4 align = center>A few words about us</h4>
+        <p align = center>We are the company of young talented developers who'd like to tell you more about IT news</p>
+        <img src= "{% static 'mainpage/images/company.jpg' %}" class="company_pic">
+    </main>
+{% endblock %}
